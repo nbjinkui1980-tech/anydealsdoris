@@ -48,6 +48,7 @@
 
 #include "cloud/cloud_backend_service.h"
 #include "cloud/config.h"
+#include "common/brand.h"
 #include "common/phdr_cache.h"
 #include "common/stack_trace.h"
 #if defined(__ELF__) && !defined(__FreeBSD__)
@@ -352,7 +353,8 @@ int main(int argc, char** argv) {
     // check if print version or help
     if (argc > 1) {
         if (strcmp(argv[1], "--version") == 0 || strcmp(argv[1], "-v") == 0) {
-            puts(doris::get_build_version(false).c_str());
+            puts((std::string(doris::kProductName) + " " + doris::get_build_version(false))
+                         .c_str());
             exit(0);
         } else if (strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-?") == 0) {
             help(basename(argv[0]));
@@ -420,7 +422,7 @@ int main(int argc, char** argv) {
     // ATTN: MUST init before LOG
     doris::init_glog("be");
 
-    LOG(INFO) << doris::get_version_string(false);
+    LOG(INFO) << doris::kProductName << doris::get_version_string(false);
 
     doris::init_thrift_logging();
 

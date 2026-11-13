@@ -17,10 +17,10 @@
 
 package org.apache.doris.qe;
 
+import org.apache.doris.common.Brand;
 import org.apache.doris.common.Config;
 import org.apache.doris.common.Version;
 import org.apache.doris.common.util.TimeUtils;
-import org.apache.doris.mysql.MysqlHandshakePacket;
 
 import com.google.common.collect.Lists;
 
@@ -99,7 +99,7 @@ public final class GlobalVariable {
             + (Config.isCloudMode() ? " (Cloud Mode)" : "");
 
     @VariableMgr.VarAttr(name = VERSION)
-    public static String version = MysqlHandshakePacket.DEFAULT_SERVER_VERSION;
+    public static String version = Brand.serverVersion();
 
     // 0: table names are stored as specified and comparisons are case sensitive.
     // 1: table names are stored in lowercase on disk and comparisons are not case sensitive.

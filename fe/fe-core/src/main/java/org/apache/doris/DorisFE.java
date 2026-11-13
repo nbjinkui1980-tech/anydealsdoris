@@ -19,6 +19,7 @@ package org.apache.doris;
 
 import org.apache.doris.catalog.Env;
 import org.apache.doris.cluster.ClusterGuardFactory;
+import org.apache.doris.common.Brand;
 import org.apache.doris.common.CommandLineOptions;
 import org.apache.doris.common.Config;
 import org.apache.doris.common.FeConstants;
@@ -215,7 +216,7 @@ public class DorisFE {
             fuzzyConfigs();
             initClusterGuard(dorisHomeDir);
 
-            LOG.info("Doris FE starting...");
+            LOG.info("{} FE starting...", Brand.PRODUCT_NAME);
 
             FrontendOptions.init();
 
@@ -499,12 +500,14 @@ public class DorisFE {
     }
 
     private static void printVersion() {
+        LogUtils.stdout("Product: " + Brand.PRODUCT_NAME);
         LogUtils.stdout("Build version: " + Version.DORIS_BUILD_VERSION);
         LogUtils.stdout("Build time: " + Version.DORIS_BUILD_TIME);
         LogUtils.stdout("Build info: " + Version.DORIS_BUILD_INFO);
         LogUtils.stdout("Build hash: " + Version.DORIS_BUILD_HASH);
         LogUtils.stdout("Java compile version: " + Version.DORIS_JAVA_COMPILE_VERSION);
 
+        LOG.info("Product: {}", Brand.PRODUCT_NAME);
         LOG.info("Build version: {}", Version.DORIS_BUILD_VERSION);
         LOG.info("Build time: {}", Version.DORIS_BUILD_TIME);
         LOG.info("Build info: {}", Version.DORIS_BUILD_INFO);

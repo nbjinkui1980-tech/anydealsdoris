@@ -17,6 +17,8 @@
 
 package org.apache.doris.mysql;
 
+import org.apache.doris.common.Brand;
+
 import com.google.common.primitives.Bytes;
 import mockit.Expectations;
 import mockit.Mocked;
@@ -65,7 +67,8 @@ public class MysqlHandshakePacketTest {
         // assert protocol version
         Assert.assertEquals(10, MysqlProto.readInt1(buffer));
         // server version
-        Assert.assertEquals("5.7.99", new String(MysqlProto.readNulTerminateString(buffer)));
+        Assert.assertEquals(Brand.serverVersion(), new String(MysqlProto.readNulTerminateString(buffer)));
+        Assert.assertTrue(Brand.serverVersion().startsWith("5.7.99-"));
         // connection id
         Assert.assertEquals(1090, MysqlProto.readInt4(buffer));
         // plugin data 1
