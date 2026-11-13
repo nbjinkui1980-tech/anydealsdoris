@@ -10,7 +10,7 @@ SELECT /*+ SET_VAR(query_timeout = 600) */ ref_0.`availqty` AS c0,
                                                                                     ORDER BY ref_0.`supplycost`) AS c6,
                                                                                    ref_0.`supplycost` AS c7,
                                                                                    ref_0.`supplycost` AS c8,
-                                                                                   version() AS c9,
+                                                                                   substring_index(version(), '-', 1) AS c9,
                                                                                    ref_0.`suppkey` AS c10
 FROM regression_test_query_p0_sql_functions_string_functions.tpch_tiny_partsupp AS ref_0
 WHERE TRUE

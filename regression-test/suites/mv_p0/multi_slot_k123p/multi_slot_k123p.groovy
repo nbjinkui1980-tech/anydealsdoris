@@ -63,5 +63,5 @@ suite ("multi_slot_k123p") {
 
     qt_select_mv "select lhs.k1,rhs.k2 from d_table as lhs right join d_table as rhs on lhs.k1=rhs.k1 order by lhs.k1;"
 
-    qt_select_mv "select k1,version() from d_table order by k1;"
+    qt_select_mv "select k1,substring_index(version(), '-', 1) from d_table order by k1;"
 }

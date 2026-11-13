@@ -57,5 +57,5 @@ suite ("multi_slot5") {
 
     order_qt_select_mv "select lhs.k1,rhs.k2 from multi_slot5 as lhs right join multi_slot5 as rhs on lhs.k1=rhs.k1 order by lhs.k1;"
 
-    order_qt_select_mv "select k1,version() from multi_slot5 order by k1;"
+    order_qt_select_mv "select k1,substring_index(version(), '-', 1) from multi_slot5 order by k1;"
 }

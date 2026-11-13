@@ -138,6 +138,8 @@ public:
     }
 };
 
+// Intentionally not branded: FE folds version() to a constant (see Brand.serverVersion() in FE),
+// so this BE value is only a fallback and keeps the plain MySQL-compatible number.
 const std::string FunctionVersion::version = "5.7.99";
 
 void register_function_utility(SimpleFunctionFactory& factory) {
