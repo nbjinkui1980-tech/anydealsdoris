@@ -1238,7 +1238,7 @@ mkdir -p "${DORIS_HOME}/output/tools"
 cp -r -p tools/fdb "${DORIS_HOME}/output/tools"
 
 echo "***************************************"
-echo "Successfully build Doris"
+echo "Successfully build AnydealsDoris"
 echo "***************************************"
 
 if [[ -n "${DORIS_POST_BUILD_HOOK}" ]]; then

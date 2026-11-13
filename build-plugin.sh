@@ -128,7 +128,7 @@ else
 fi
 
 echo "***************************************"
-echo "Successfully build Doris FE Plugin"
+echo "Successfully build AnydealsDoris FE Plugin"
 echo "***************************************"
 
 exit 0
