@@ -19,7 +19,7 @@ under the License.
 
 <div align="center">
 
-# Apache Doris
+# AnydealsDoris
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![GitHub release](https://img.shields.io/github/release/apache/doris.svg)](https://github.com/apache/doris/releases)
@@ -55,9 +55,11 @@ under the License.
 
 
 
-Apache Doris is an easy-to-use, high-performance and real-time analytical database based on MPP architecture, known for its extreme speed and ease of use. It only requires a sub-second response time to return query results under massive data and can support not only high-concurrency point query scenarios but also high-throughput complex analysis scenarios.
+AnydealsDoris is an easy-to-use, high-performance and real-time analytical database based on MPP architecture, known for its extreme speed and ease of use. It only requires a sub-second response time to return query results under massive data and can support not only high-concurrency point query scenarios but also high-throughput complex analysis scenarios.
 
-All this makes Apache Doris an ideal tool for scenarios including report analysis, ad-hoc query, unified data warehouse, and data lake query acceleration. On Apache Doris, users can build various applications, such as user behavior analysis, AB test platform, log retrieval analysis, user portrait analysis, and order analysis.
+All this makes AnydealsDoris an ideal tool for scenarios including report analysis, ad-hoc query, unified data warehouse, and data lake query acceleration. On AnydealsDoris, users can build various applications, such as user behavior analysis, AB test platform, log retrieval analysis, user portrait analysis, and order analysis.
+> AnydealsDoris is based on [Apache Doris](https://github.com/apache/doris), an Apache Software Foundation project licensed under the Apache License 2.0. Apache, Apache Doris and the Apache feather logo are trademarks of The Apache Software Foundation. This distribution is not endorsed by the ASF. See `LICENSE.txt` and `NOTICE.txt`.
+
 
 🎉 Check out the 🔗[All releases](https://doris.apache.org/docs/releasenotes/all-release), where you'll find a chronological summary of Apache Doris versions released over the past year.
 
