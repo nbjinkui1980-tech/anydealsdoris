@@ -20,10 +20,12 @@
 import React, {useState, useEffect} from 'react';
 import {Table, Popover, Input} from 'antd';
 import {FilterFilled} from '@ant-design/icons';
+import {useTranslation} from 'react-i18next';
 import {getColumns, filterTableData} from './table.utils';
 import './index.less';
 
 export default function SortFilterTable(props: any) {
+    const {t} = useTranslation();
     const {isFilter = false, isSort = false, allTableData, isInner, isSystem = false, path = '', rowKey} = props;
     const [tableData, setTableData] = useState<any[]>([]);
     const [localColumns, setColumns] = useState<any[]>([]);
@@ -36,7 +38,7 @@ export default function SortFilterTable(props: any) {
     }
 
     const content = (
-        <Input placeholder="Filter data" onChange={e => changeTableData(e)}/>
+        <Input placeholder={t('filterData')} onChange={e => changeTableData(e)}/>
     );
     useEffect(() => {
         if (allTableData.rows && allTableData.column_names) {

@@ -45,5 +45,16 @@
     "search":"Search",
     "executionFailed":"Execution failed",
     "loading":"loading",
-    "Download": "Download"
+    "Download": "Download",
+    "filterData": "Filter data",
+    "fileUploadSuccess": "{{name}} file uploaded successfully",
+    "fileUploadFailed": "{{name}} file upload failed",
+    "importResult": "Import Result",
+    "action": "Action",
+    "delete": "Delete",
+    "add": "Add",
+    "usernameRequired": "Please input your username!",
+    "passwordRequired": "Please input your password!",
+    "newVerboseName": "new verbose name",
+    "delVerboseName": "del verbose name"
 }

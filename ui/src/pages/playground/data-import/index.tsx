@@ -87,10 +87,10 @@ export default function DataImport(props: any) {
 
             // }
             if (info.file.status === 'done') {
-                notification.success({message: `${info.file.name} file uploaded successfully`});
+                notification.success({message: t('fileUploadSuccess', {name: info.file.name})});
                 getUploadList()
             } else if (info.file.status === 'error') {
-                notification.error({message: `${info.file.name} file upload failed.`});
+                notification.error({message: t('fileUploadFailed', {name: info.file.name})});
                 setHeaderUploadData([]);
                 setColsUploadData([])
             }
@@ -347,14 +347,14 @@ export default function DataImport(props: any) {
                             <Form.Item
                                 label="Label"
                                 name="Label"
-                                rules={[{required: true, message: "Please Enter"}]}
+                                rules={[{required: true, message: t('pleaseEnter')}]}
                             >
                                 <Input value={labelV} onChange={e=>setLabel(e.target.value)}/>
                             </Form.Item>
                             <Form.Item
                                 label="columns"
                                 name="columns"
-                                rules={[{required: false, message: "Please Enter"}]}
+                                rules={[{required: false, message: t('pleaseEnter')}]}
                             >
                                 <Input value={columnsV} onChange={e=>{setColumns(e.target.value);}}/>
                             </Form.Item>

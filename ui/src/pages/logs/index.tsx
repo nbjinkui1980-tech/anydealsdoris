@@ -20,11 +20,13 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {BackTop, Col, Divider, Input, Row, Typography} from 'antd';
 import {getLog} from 'Src/api/api';
+import {useTranslation} from 'react-i18next';
 import {Result} from "@src/interfaces/http.interface";
 
 const {Title, Paragraph} = Typography;
 const {Search} = Input;
 export default function Logs(params: any) {
+    const {t} = useTranslation();
     const container = useRef<HTMLDivElement>(null);
     const [LogConfiguration, setLogConfiguration] = useState<any>({});
     const [LogContents, setLogContents] = useState<any>({});
@@ -64,15 +66,15 @@ export default function Logs(params: any) {
             <Row>
                 <Col span={4}>
                     <Search
-                        placeholder="new verbose name"
-                        enterButton="Add"
+                        placeholder={t('newVerboseName')}
+                        enterButton={t('add')}
                         onSearch={value => getLogData({add_verbose: value})}
                     />
                 </Col>
                 <Col span={4} offset={1}>
                     <Search
-                        placeholder="del verbose name"
-                        enterButton="Delete"
+                        placeholder={t('delVerboseName')}
+                        enterButton={t('delete')}
                         onSearch={value => getLogData({del_verbose: value})}
                     />
                 </Col>

@@ -75,7 +75,7 @@ function Login(){
                 <Form.Item
                     label={t('username')}
                     name="username"
-                    rules={[{required: true, message: 'Please input your username!'}]}
+                    rules={[{required: true, message: t('usernameRequired')}]}
                 >
                     <Input value={username} onChange={(e)=>{setUsername(e.target.value)}} />
                 </Form.Item>
@@ -83,7 +83,7 @@ function Login(){
                 <Form.Item
                     label={t('password')}
                     name="password"
-                    rules={[{required: false, message: 'Please input your password!'}]}
+                    rules={[{required: false, message: t('passwordRequired')}]}
                 >
                     <Input.Password/>
                 </Form.Item>

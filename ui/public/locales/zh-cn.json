@@ -45,5 +45,16 @@
     "search":"查询",
     "executionFailed": "执行失败",
     "loading":"加载中",
-    "Download": "下载"
+    "Download": "下载",
+    "filterData": "筛选数据",
+    "fileUploadSuccess": "文件 {{name}} 上传成功",
+    "fileUploadFailed": "文件 {{name}} 上传失败",
+    "importResult": "导入结果",
+    "action": "操作",
+    "delete": "删除",
+    "add": "添加",
+    "usernameRequired": "请输入用户名！",
+    "passwordRequired": "请输入密码！",
+    "newVerboseName": "新增详细日志名称",
+    "delVerboseName": "删除详细日志名称"
 }

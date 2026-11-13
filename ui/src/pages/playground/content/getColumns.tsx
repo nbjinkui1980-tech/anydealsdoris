@@ -18,6 +18,7 @@
  */
  
 import React from 'react';
+import i18n from '../../../i18n';
 
 export default function getColumns(data, fa, isAction){
     if(!data){
@@ -58,11 +59,11 @@ export default function getColumns(data, fa, isAction){
     if(isAction){
         arr.push(
             {
-                title: 'Action',
+                title: i18n.t('action'),
                 dataIndex: '',
                 key: 'x',
                 render: (text, record, index) => {
-                    return <a onClick={(e) => {fa(record, index, e)}}>Delete</a>
+                    return <a onClick={(e) => {fa(record, index, e)}}>{i18n.t('delete')}</a>
                 },
             },
         )

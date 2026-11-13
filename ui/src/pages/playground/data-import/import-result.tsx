@@ -19,6 +19,7 @@
  
 import React from 'react';
 import {Modal} from 'antd';
+import i18n from '../../../i18n';
 export function ImportResult(data,callback) {
     const arr = [];
     for (const i in data) {
@@ -42,7 +43,7 @@ export function ImportResult(data,callback) {
         );
     }
     Modal.info({
-        title: 'Import Result',
+        title: i18n.t('importResult'),
         width: 800,
         content: (
             <div
