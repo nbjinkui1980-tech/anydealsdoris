@@ -129,7 +129,7 @@ static const std::string kMainTemplate = R"(
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Doris</title>
+    <title>AnydealsDoris</title>
     <meta charset='utf-8'/>
     <link href='/Bootstrap-3.3.7/css/bootstrap.min.css' rel='stylesheet' media='screen' />
     <link href='/Bootstrap-3.3.7/css/bootstrap-table.min.css' rel='stylesheet' media='screen' />
@@ -144,7 +144,7 @@ static const std::string kMainTemplate = R"(
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" style="padding-top: 5px;" href="/">
-            <img src="/logo.png" width='40' height='40' alt="Doris" />
+            <img src="/logo.png" width='40' height='40' alt="AnydealsDoris" />
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
